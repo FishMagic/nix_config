@@ -5,10 +5,6 @@
 { config, lib, pkgs, ... }:
 
 {
-  # Bootloader setup
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
   networking.hostName = "xray-server";
   networking.networkmanager.enable = true;
 

@@ -5,10 +5,6 @@
 { config, lib, pkgs, ... }:
 
 {
-  # Bootloader setup
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
   networking.hostName = "nixos"; # Define your hostname.
   networking.networkmanager.enable = true;  # Easiest to use and most common.
 

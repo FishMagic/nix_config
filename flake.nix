@@ -25,6 +25,11 @@
       modules = [
         ./hardware-configuration.nix
         ./configuration.nix
+        {
+          # 在非 WSL 环境下启用 systemd-boot 引导加载程序
+          boot.loader.systemd-boot.enable = true;
+          boot.loader.efi.canTouchEfiVariables = true;
+        }
 
         home-manager.nixosModules.home-manager
         {
@@ -62,6 +67,11 @@
       modules = [
         ./hardware-configuration.nix
         ./xray-server.nix
+        {
+          # 在非 WSL 环境下启用 systemd-boot 引导加载程序
+          boot.loader.systemd-boot.enable = true;
+          boot.loader.efi.canTouchEfiVariables = true;
+        }
         # 导入 agenix 模块以解密密钥
         agenix.nixosModules.default
       ];
