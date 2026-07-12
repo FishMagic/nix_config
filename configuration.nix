@@ -23,6 +23,7 @@
     description = "laevatein";
     extraGroups = [ "networkmanager" "wheel" ];
     hashedPassword = "$6$nGWa4kjb7wUltSIu$nwx9YN9zElGCZkpOTiu8HQm8vhkjGUCyYOWBUhv.mFstQ5HCKuot3miJX39sdc5Aj6eQeJxgqLSHdy6u3Osxu.";
+    linger = true; # 开启用户常驻，为 Podman/Distrobox 提供持久的 systemd cgroup 用户会话
   };
 
   # Podman and Distrobox configuration
