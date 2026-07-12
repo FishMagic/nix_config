@@ -1,0 +1,7 @@
+# direnv local directories and config
+.direnv/
+.envrc
+
+# nix-build results
+result
+result-*
