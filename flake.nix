@@ -8,7 +8,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-wsl = {
-      url = "tarball+https://github.com/nix-community/NixOS-WSL/archive/refs/heads/release-26.05.tar.gz";
+      url = "github:nix-community/NixOS-WSL";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # 引入 agenix 密钥管理工具
