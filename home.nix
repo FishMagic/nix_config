@@ -24,6 +24,11 @@
     nix-direnv.enable = true;
   };
 
+  # 显式配置 D-Bus 会话地址，解决 WSL 环境下应用因找不到 $DISPLAY 尝试自动启动 dbus-daemon 失败的问题
+  home.sessionVariables = {
+    DBUS_SESSION_BUS_ADDRESS = "unix:path=/run/user/1000/bus";
+  };
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
